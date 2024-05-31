@@ -1,9 +1,11 @@
+import json
+
 from flask import Flask
 import Volunteers
 
 app = Flask(__name__)
 
-
 @app.route('/')
 def hello_world():
-    return Volunteers.returnVolunteerList()
+    volunteer_list = Volunteers.returnVolunteerList()
+    return json.dumps(volunteer_list)

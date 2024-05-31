@@ -1,9 +1,12 @@
 import random
 import json
+
 volunteerlist = {}
 
+
 def addVolunteer(name, position, team):
-    volunteerlist[str(name+position+team)] = {'name': name, 'position': position, 'team': team}
+    volunteerlist[str(name + position + team)] = {'name': name, 'position': position, 'team': team}
+
 
 addVolunteer('John', 'Judge', '1')
 addVolunteer('Jane', 'Referee', '2')
@@ -20,5 +23,6 @@ addVolunteer('Jocelyn', 'Inspector', '12')
 addVolunteer('Joel', 'Judge', '13')
 addVolunteer('Jolene', 'Referee', '14')
 
+
 def returnVolunteerList():
-    return json.dumps(volunteerlist)
+    return volunteerlist
