@@ -1,7 +1,7 @@
 import json
 
 from flask import Flask
-import Volunteers
+import api.Volunteers as Volunteers
 
 app = Flask(__name__)
 
